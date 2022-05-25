@@ -38,7 +38,7 @@ const NewExpense = (props) => {
     event.preventDefault();
     const formObject = {
       title: newTitle,
-      amount: newAmount,
+      amount: +newAmount,
       date: new Date(newDate),
     };
     props.onSaveNewExpense(formObject);
@@ -99,7 +99,7 @@ const NewExpense = (props) => {
           </div>
         </form>
       ) : (
-        <div className="new-expense__controls justify-content-center">
+        <div className="new-expense__controls justify-content-center mb-0">
           <button
             type="button"
             className="new-expense__control justify-content-center"
